@@ -3,71 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100;300;400;700;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Apple</title>
-    <style>
-      * {
-        margin: 0;
-      }
-      nav {
-        width: 100vw;
-        height: 30px;
-        background: #fafafccc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      }
-      .menu {
-        width: 692px;
-        height: 30px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      .menu span {
-        padding: 0 8px;
-        font-size: 9px;
-        font-weight: 400;
-        letter-spacing: -0.01em;
-        font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-          sans-serif;
-        color: var(--r-globalnav-color);
-        line-height: 1;
-      }
-      .first {
-        width: 100vw;
-        height: 400px;
-        background-color: #f5f5f7;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .title-wrapper {
-        width: 100vw;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .gift-wrapper {
-        width: 100vw;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .gift-wrapper img {
-        size: 300px 400px;
-      }
-      .title-wrapper h2 {
-        font-size: 56px;
-        line-height: 1.07143;
-        font-weight: 600;
-        letter-spacing: -0.005em;
-        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue",
-          "Helvetica", "Arial", sans-serif;
-      }
-    </style>
   </head>
   <body>
     <nav>
@@ -115,13 +58,19 @@
         </svg>
       </div>
     </nav>
-    <div class="first">
-      <div class="title-wrapper">
-        <h2 class="headline">There's still time to work your magic.</h2>
+    <section>
+      <div class="first">
+        <div class="ad">
+          <p>
+            We're donating $5 to the Global Fund for every purchase made with
+            Apple Pay at Apple. Through 12/8.
+          </p>
+        </div>
+        <div class="background">
+          <img src="Figure.png" alt="figure" />
+          <p>iPhone 16 pro</p>
+        </div>
       </div>
-      <div class="gift-wrapper">
-        <img src="apple.png" alt="gift box" />
-      </div>
-    </div>
+    </section>
   </body>
 </html>
