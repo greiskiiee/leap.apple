@@ -420,6 +420,30 @@ nav {
 .link {
   width: 417px;
   height: 236px;
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+}
+.link p {
+  display: flex;
+  width: 450.7px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.224px;
+  padding: 198px 178.3px 20px 15px;
+}
+.linkdiv1 {
+  width: 208px;
+  height: 236px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #iphone16pro {
   background-image: url(iphone16pro.png);
@@ -504,11 +528,16 @@ nav {
   background-position: center;
 }
 #music {
-  background-image: url(music.png);
-  background-position: 15px;
-  background-repeat: no-repeat;
-  background-color: #1b2632;
+  background: #1b2632;
 }
+/* #musicsimg {
+  width: 59px;
+  height: 13.92px;
+  padding-top: 199px;
+  padding-left: 343px;
+  position: relative;
+  z-index: 3;
+} */
 #arcade {
   background-image: url(arcade.png);
   background-position: center;
