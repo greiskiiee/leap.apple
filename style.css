@@ -100,7 +100,7 @@ nav {
   /* padding-top: 32px; */
   display: flex;
   flex-direction: column;
-  gap: 12PX;
+  gap: 12px;
   padding-bottom: 12px;
 }
 .menu {
@@ -243,7 +243,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 12px; 
+  gap: 12px;
   /* margin-top: 1%;  */
 }
 .little-background {
@@ -412,18 +412,20 @@ nav {
 .gallery-section {
   width: 100vw;
   height: 292px;
+  overflow: scroll;
 }
 .gallery {
   width: 100vw;
   display: inline-flex;
   height: 236px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
   flex-shrink: 0;
+  overflow: scroll;
 }
 .link {
-  width: 28%;
+  width: 417px;
   height: 236px;
   display: flex;
   flex-direction: column;
@@ -458,7 +460,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.linkdiv1-span{
+.linkdiv1-span {
   width: 100%;
   height: 50%;
   display: flex;
@@ -466,7 +468,7 @@ nav {
   align-items: flex-end;
   padding-left: 15px;
 }
-.linkdiv1-span span{
+.linkdiv1-span span {
   color: #fff;
   font-family: Inter;
   font-size: 14px;
@@ -475,7 +477,7 @@ nav {
   line-height: 18px; /* 128.571% */
   letter-spacing: -0.224px;
 }
-.linkdiv1-logo{
+.linkdiv1-logo {
   width: 100%;
   height: 50%;
   display: flex;
@@ -484,11 +486,11 @@ nav {
   padding-right: 15px;
   padding-bottom: 20px;
 }
-.musiclogo{
+.musiclogo {
   width: 59px;
   height: 13.92px;
 }
-.rnb{
+.rnb {
   width: 196px;
   height: 196px;
 }
@@ -536,32 +538,27 @@ nav {
   background-size: cover;
   padding-top: 401px;
   background-position: center;
-
 }
 #iwatch {
   background-image: url(iwatch.png);
   background-size: cover;
   background-position: center;
-
 }
 #macbook {
   background-image: url(macbook.png);
   background-size: cover;
   padding-top: 53px;
   background-position: center;
-
 }
 #trade {
   background-image: url(trade.png);
   background-size: cover;
   background-position: center;
-
 }
 #applecard {
   background-image: url(applecard.png);
   background-size: cover;
   background-position: center;
-
 }
 #apply {
   display: flex;
