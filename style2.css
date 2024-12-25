@@ -634,3 +634,23 @@ nav {
   width: 12px;
   height: 12px;
 }
+#homepod {
+  background-image: url(homepod.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+#ipadCase {
+  background-image: url(sagecase.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+#beats {
+  background-image: url(beatsSolo.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+#loop {
+  background-image: url(smartLoop.jpeg);
+  background-position: center;
+  background-size: cover;
+}
