@@ -439,6 +439,7 @@ nav {
   height: 58px;
   padding: 25px 86px 21px 79px;
   align-items: flex-start;
+  justify-content: center;
   gap: 7px;
   background-color: transparent;
   flex-shrink: 0;
@@ -618,7 +619,7 @@ nav {
   background-position: center;
   background-size: cover;
 }
-#firstCard {
+#first2Card {
   width: 400px;
   background-image: url(holidaypic.jpeg);
   background-position: center;
@@ -628,4 +629,8 @@ nav {
   background-image: url(iphonecase.jpeg);
   background-position: center;
   background-size: cover;
+}
+#colors {
+  width: 12px;
+  height: 12px;
 }
