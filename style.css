@@ -81,6 +81,14 @@
     width: 100%;
   }
 }
+@keyframes gallery {
+  0% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 section {
   display: flex;
   flex-direction: column;
@@ -415,14 +423,15 @@ nav {
   overflow: scroll;
 }
 .gallery {
-  width: 100vw;
+  width: 100%;
   display: inline-flex;
   height: 236px;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
   flex-shrink: 0;
-  overflow: scroll;
+  /* overflow: hidden; */
+  animation: gallery 10s linear infinite;
 }
 .link {
   width: 417px;
