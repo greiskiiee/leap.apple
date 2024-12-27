@@ -3,82 +3,83 @@
   border: 0;
   box-sizing: border-box;
 }
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {
-    width: 8.33%;
+@media only screen and (max-width: 480px) {
+  /* For phones: */
+  .background h1 {
+    font-size: 29.25px !important;
   }
-  .col-s-2 {
-    width: 16.66%;
+  .background h2 {
+    font-size: 17.367px !important;
   }
-  .col-s-3 {
-    width: 25%;
+  .learnMoreBtn {
+    width: fit-content !important;
+    height: 36px !important;
+    padding: 10px 15.8px 10px 16px !important;
+    font-size: 14px !important;
   }
-  .col-s-4 {
-    width: 33.33%;
+  .buyBtn {
+    width: 62px !important;
+    height: 36px !important;
+    padding: 10px 18.65px 10px 18.84px !important;
+    font-size: 14px !important;
   }
-  .col-s-5 {
-    width: 41.66%;
+  #iphone16pro {
+    background-image: url(16pro-phones.jpeg) !important;
   }
-  .col-s-6 {
-    width: 50%;
+  #iphone16 {
+    background-image: url(16-phones.jpeg) !important;
   }
-  .col-s-7 {
-    width: 58.33%;
+  .background2 {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
   }
-  .col-s-8 {
-    width: 66.66%;
+  .little-background {
+    height: 500px !important;
   }
-  .col-s-9 {
-    width: 75%;
-  }
-  .col-s-10 {
-    width: 83.33%;
-  }
-  .col-s-11 {
-    width: 91.66%;
-  }
-  .col-s-12 {
-    width: 100%;
+  .background {
+    height: 500px !important;
   }
 }
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {
-    width: 8.33%;
+@media only screen and (max-width: 768px) {
+  /* For tablets: */
+  .background h1 {
+    font-size: 43.875px !important;
   }
-  .col-2 {
-    width: 16.66%;
+  .background h2 {
+    font-size: 21.938px !important;
   }
-  .col-3 {
-    width: 25%;
+  .learnMoreBtn {
+    width: 130.72px !important;
+    height: 44px !important;
+    padding: 12px 21.8px 12px 22px !important;
+    font-size: 17px !important;
   }
-  .col-4 {
-    width: 33.33%;
+  .buyBtn {
+    width: 73.2px !important;
+    height: 44px !important;
+    padding: 12px 21.8px 12px 22px !important;
+    font-size: 17px !important;
   }
-  .col-5 {
-    width: 41.66%;
+  .menu {
+    justify-content: space-between !important;
   }
-  .col-6 {
-    width: 50%;
+  .menu span {
+    display: none !important;
+    visibility: hidden !important;
   }
-  .col-7 {
-    width: 58.33%;
+  .little-background {
+    height: 490px !important;
   }
-  .col-8 {
-    width: 66.66%;
+  .little-background .btn-container .learnMoreBtn {
+    width: 104.25px !important;
+    height: 36px !important;
+    padding: 10px 15.8px 10px 16px !important;
   }
-  .col-9 {
-    width: 75%;
-  }
-  .col-10 {
-    width: 83.33%;
-  }
-  .col-11 {
-    width: 91.66%;
-  }
-  .col-12 {
-    width: 100%;
+  .little-background .btn-container .buyBtn {
+    width: 62px !important;
+    height: 36px !important;
+    padding: 10px 18.65px 10px 18.84px !important;
+    font-size: 14px !important;
   }
 }
 @keyframes gallery {
@@ -247,16 +248,19 @@ nav {
 }
 .background2 {
   width: 100vw;
-  height: 580px;
-  display: flex;
+  height: fit-content;
+  /* display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 12px;
   /* margin-top: 1%;  */
 }
 .little-background {
-  max-width: calc(50% - 6px);
-  height: 100%;
+  /* max-width: calc(50% - 6px); */
+  height: 580px;
   flex-shrink: 0;
   display: flex;
   flex: 1;
