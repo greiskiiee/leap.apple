@@ -3,49 +3,13 @@
   border: 0;
   box-sizing: border-box;
 }
-@media only screen and (max-width: 480px) {
-  /* For phones: */
-  .background h1 {
-    font-size: 29.25px !important;
-  }
-  .background h2 {
-    font-size: 17.367px !important;
-  }
-  .learnMoreBtn {
-    width: fit-content !important;
-    height: 36px !important;
-    padding: 10px 15.8px 10px 16px !important;
-    font-size: 14px !important;
-  }
-  .buyBtn {
-    width: 62px !important;
-    height: 36px !important;
-    padding: 10px 18.65px 10px 18.84px !important;
-    font-size: 14px !important;
-  }
-  #iphone16pro {
-    background-image: url(16pro-phones.jpeg) !important;
-  }
-  #iphone16 {
-    background-image: url(16-phones.jpeg) !important;
-  }
-  .background2 {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto !important;
-  }
-  .little-background {
-    height: 500px !important;
-  }
-  .background {
-    height: 500px !important;
-  }
-}
+
 @media only screen and (max-width: 768px) {
   /* For tablets: */
-  .background h1 {
+  .container h1 {
     font-size: 43.875px !important;
   }
-  .background h2 {
+  .container h2 {
     font-size: 21.938px !important;
   }
   .learnMoreBtn {
@@ -67,9 +31,9 @@
     display: none !important;
     visibility: hidden !important;
   }
-  .little-background {
-    height: 490px !important;
-  }
+  /* .little-background {
+    /* height: 490px !important; */
+
   .little-background .btn-container .learnMoreBtn {
     width: 104.25px !important;
     height: 36px !important;
@@ -80,6 +44,101 @@
     height: 36px !important;
     padding: 10px 18.65px 10px 18.84px !important;
     font-size: 14px !important;
+  }
+  .tabpanel {
+    height: 405px !important;
+  }
+  #movie2 {
+    background-image: url(blitz.jpeg) !important;
+  }
+  .link,
+  .linkMusic {
+    width: 286px !important;
+    height: 161px !important;
+  }
+  .rnb {
+    visibility: hidden !important;
+  }
+  .background {
+    height: 500px !important;
+  }
+  .gallery-section {
+    height: 194px !important;
+  }
+  .carousel-item {
+    width: 90vw;
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* For phones: */
+  .container h1 {
+    font-size: 29.25px !important;
+  }
+  .container h2 {
+    font-size: 17.367px !important;
+  }
+  .learnMoreBtn {
+    width: fit-content !important;
+    height: 36px !important;
+    padding: 10px 15.8px 10px 16px !important;
+    font-size: 14px !important;
+  }
+  .buyBtn {
+    width: 62px !important;
+    height: 36px !important;
+    padding: 10px 18.65px 10px 18.84px !important;
+    font-size: 14px !important;
+  }
+  .menu {
+    justify-content: space-between !important;
+  }
+  .menu span {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .background {
+    height: 580px !important;
+  }
+  #iphone16pro {
+    background-image: url(16pro-phones.jpeg) !important;
+    .container {
+      padding-top: 382px;
+    }
+  }
+  #iphone16 {
+    background-image: url(16-phones.jpeg) !important;
+  }
+  .background2 {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  .little-background {
+    /* height: 500px !important; */
+    width: 100vw !important;
+  }
+  .tabpanel {
+    height: 495px !important;
+  }
+  .gallery-section {
+    height: 160px !important;
+  }
+  .link,
+  .linkMusic {
+    width: 238px !important;
+    height: 134px !important;
+  }
+  .rnb {
+    visibility: hidden !important;
+  }
+  .carousel-item {
+    width: 274px !important;
+    height: 495px !important;
+  }
+  #movie2 {
+    background-image: url(blitz.jpeg) !important;
+    background-position: center;
+    /* width: 274px !important; */
   }
 }
 @keyframes gallery {
@@ -157,7 +216,17 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-.background h1 {
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+.container h1 {
   color: #f5f5f7;
   text-align: center;
   font-family: Inter;
@@ -166,9 +235,9 @@ nav {
   font-weight: 600;
   line-height: 60px;
   letter-spacing: -0.28px;
-  margin-top: 55px;
+  /* margin-top: 55px; */
 }
-.background h2 {
+.container h2 {
   color: #f5f5f7;
   text-align: center;
   font-family: Inter;
@@ -179,6 +248,7 @@ nav {
   letter-spacing: 0.196px;
   padding: 6px 0px 19px 0;
 }
+
 .btn-container {
   width: 400px;
   height: 44px;
@@ -259,7 +329,7 @@ nav {
   /* margin-top: 1%;  */
 }
 .little-background {
-  /* max-width: calc(50% - 6px); */
+  width: calc(50vw - 6px);
   height: 580px;
   flex-shrink: 0;
   display: flex;
@@ -383,43 +453,51 @@ nav {
 }
 .tabpanel {
   width: 100vw;
-  height: 705.25px;
+  height: 668px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  overflow: scroll;
 }
 .panelBG {
   display: flex;
-  width: 100vw;
-  height: 90%;
-  gap: 15px;
-}
-.movie1 {
-  background-image: url(movie1.jpeg);
-  background-position: right;
-  opacity: 0.29;
-  width: 15%;
-}
-.movie2 {
-  background-image: url(movie2.png);
-  /* background-position:inherit; */
-  /* object-fit: contain; */
-  background-size: cover;
-  width: 70%;
+  /* justify-content: center; */
+  align-items: center;
+  width: fit-content;
   height: 100%;
-  /* flex-shrink: 0; */
+  gap: 15px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  position: relative;
 }
-.movie3 {
-  background-image: url(movie3.jpeg);
-  background-position: left;
-  opacity: 0.29;
-  width: 15%;
+.carousel-item {
+  width: 1250px;
+  /* width: 300px; */
+  height: 100%;
+  position: relative;
+  scroll-snap-align: center;
+  background: var(--url) center / cover no-repeat;
 }
+
 .tablist {
   width: 220px;
   height: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   flex-shrink: 0;
   padding-top: 16px;
+  padding-bottom: 48px;
+}
+.bullet {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 100%;
+  opacity: 0.5;
 }
 .gallery-section {
   width: 100vw;
@@ -609,4 +687,30 @@ nav {
 #music2 {
   background-repeat: no-repeat;
   background-color: #ebb799;
+}
+
+#movie1 {
+  background-image: url(movie1.jpeg);
+  background-position: center;
+}
+#movie2 {
+  background-image: url(movie2.png);
+  background-size: cover;
+  background-position: center;
+}
+#movie3 {
+  background-image: url(movie3.jpeg);
+  background-position: center;
+}
+#movie4 {
+  background-image: url(movie4.jpeg);
+  background-position: center;
+}
+#movie5 {
+  background-image: url(movie5.jpeg);
+  background-position: center;
+}
+#movie6 {
+  background-image: url(movie6.jpeg);
+  background-position: center;
 }

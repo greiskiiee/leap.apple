@@ -4,11 +4,15 @@
   box-sizing: border-box;
   background: #f5f5f7;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 768px) {
   /* For tablets: */
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
+  .menu {
+    justify-content: space-between !important;
+  }
+  .menu span {
+    display: none !important;
+    visibility: hidden !important;
+  }
 }
 section {
   display: flex;
@@ -230,7 +234,7 @@ footer div button {
   display: inline-flex;
   width: fit-content;
   height: 100px;
-  padding: 30px 38.53px 61px 7.3%;
+  padding: 30px 38.53px 91px 7.3%;
   align-items: flex-start;
   gap: 4.23px;
   flex-shrink: 0;
@@ -393,6 +397,11 @@ footer div button {
   border-radius: 18px;
   background: #fff;
   box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  transition-property: transform;
+  transition-duration: 800ms;
+}
+.card:hover {
+  transform: scale(1.03);
 }
 .carditem {
   width: 313px;
