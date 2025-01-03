@@ -65,18 +65,45 @@
   .gallery-section {
     height: 194px !important;
   }
+  .tabpanel {
+    width: 100vw;
+    height: 367.78px !important;
+  }
   .carousel-item {
-    width: 90vw;
-    height: 500px;
+    width: 689px !important;
+    height: 367.78px !important;
+  }
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+  #radio2:checked ~ .first {
+    margin-left: -16% !important;
+  }
+  #radio3:checked ~ .first {
+    margin-left: -33% !important;
+  }
+  #radio4:checked ~ .first {
+    margin-left: -49% !important;
+  }
+  #radio5:checked ~ .first {
+    margin-left: -66% !important;
+  }
+  #radio6:checked ~ .first {
+    margin-left: -82% !important;
   }
 }
 @media only screen and (max-width: 480px) {
   /* For phones: */
-  .container h1 {
-    font-size: 29.25px !important;
-  }
-  .container h2 {
-    font-size: 17.367px !important;
+  .container {
+    height: 200px !important;
+    h1 {
+      font-size: 29.25px !important;
+      /* padding-bottom: 2px !important; */
+    }
+    h2 {
+      font-size: 17.367px !important;
+      padding: 3px 0 10px 0px !important;
+    }
   }
   .learnMoreBtn {
     width: fit-content !important;
@@ -102,9 +129,10 @@
   }
   #iphone16pro {
     background-image: url(16pro-phones.jpeg) !important;
-    .container {
-      padding-top: 382px;
-    }
+    align-items: flex-end !important;
+    /* .container {
+      justify-content: flex-end !important;
+    } */
   }
   #iphone16 {
     background-image: url(16-phones.jpeg) !important;
@@ -135,8 +163,33 @@
     width: 274px !important;
     height: 495px !important;
   }
-  #movie2 {
+  #movie1 {
     background-image: url(blitz.jpeg) !important;
+    background-position: center;
+    /* width: 274px !important; */
+  }
+  #movie2 {
+    background-image: url(movie1-phone.jpeg) !important;
+    background-position: center;
+    /* width: 274px !important; */
+  }
+  #movie3 {
+    background-image: url(movie3-phone.jpeg) !important;
+    background-position: center;
+    /* width: 274px !important; */
+  }
+  #movie4 {
+    background-image: url(movie4-phone.jpeg) !important;
+    background-position: center;
+    /* width: 274px !important; */
+  }
+  #movie5 {
+    background-image: url(movie5-phone.jpeg) !important;
+    background-position: center;
+    /* width: 274px !important; */
+  }
+  #movie6 {
+    background-image: url(movie6-phone.jpeg) !important;
     background-position: center;
     /* width: 274px !important; */
   }
@@ -163,6 +216,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: fixed;
+  z-index: 99;
 }
 .first {
   /* padding-top: 32px; */
@@ -213,16 +267,16 @@ nav {
   height: 692px;
   /* background: #000; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 .container {
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding-top: 55px;
   padding-bottom: 55px;
 }
@@ -457,7 +511,7 @@ nav {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  overflow: scroll;
+  overflow: hidden;
 }
 .panelBG {
   display: flex;
@@ -466,21 +520,50 @@ nav {
   width: fit-content;
   height: 100%;
   gap: 15px;
-  overflow-x: scroll;
+  /* overflow-x: scroll;
   scrollbar-width: none;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  position: relative;
+  position: relative; */
+}
+.panelBG input {
+  display: none;
 }
 .carousel-item {
   width: 1250px;
   /* width: 300px; */
   height: 100%;
   position: relative;
+  transition: 2s;
   scroll-snap-align: center;
   background: var(--url) center / cover no-repeat;
 }
-
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -13%;
+}
+#radio3:checked ~ .first {
+  margin-left: -30%;
+}
+#radio4:checked ~ .first {
+  margin-left: -46%;
+}
+#radio5:checked ~ .first {
+  margin-left: -63%;
+}
+#radio6:checked ~ .first {
+  margin-left: -76%;
+}
+#radio1:checked ~ .navigation label[for="radio1"],
+#radio2:checked ~ .navigation label[for="radio2"],
+#radio3:checked ~ .navigation label[for="radio3"],
+#radio4:checked ~ .navigation label[for="radio4"],
+#radio5:checked ~ .navigation label[for="radio5"],
+#radio6:checked ~ .navigation label[for="radio6"] {
+  background: #919191;
+}
 .tablist {
   width: 220px;
   height: 8px;
@@ -491,6 +574,19 @@ nav {
   flex-shrink: 0;
   padding-top: 16px;
   padding-bottom: 48px;
+}
+.tablist-button {
+  border: 1.5px solid black;
+  padding: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 1s;
+}
+.tablist-button:not(:last-child) {
+  margin-right: 10px;
+}
+.tablist-button:hover {
+  background: #919191;
 }
 .bullet {
   width: 8px;
@@ -609,9 +705,13 @@ nav {
   background-image: url(appleBG.png);
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   /* margin-top: 12px; */
   h1 {
-    margin-top: 476px;
+    /* margin-top: 476px; */
     color: #1d1d1f;
   }
   h2 {
